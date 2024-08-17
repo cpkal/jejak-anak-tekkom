@@ -1,0 +1,17 @@
+{
+  "name": "jejak_anak_tekkom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npx tailwindcss -i ./assets/css/tailwind.css -o ./_site/assets/css/style.css --minify",
+    "watch:css": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.4.10"
+  }
+}

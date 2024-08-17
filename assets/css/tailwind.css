@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Basic styling for highlighted code blocks */
+.highlight pre {
+  background-color: #2e2e2e; /* Dark background */
+  color: #dcdcdc; /* Light text color */
+  padding: 1rem; /* Padding around the code block */
+  border-radius: 0.5rem; /* Rounded corners */
+  overflow-x: auto; /* Horizontal scrolling */
+  margin: 0; /* Remove default margin */
+}
+
+/* Default colors for code elements */
+.highlight .k {
+  color: #ff79c6; /* Keywords */
+}
+
+.highlight .c {
+  color: #6272a4; /* Comments */
+}
+
+.highlight .o {
+  color: #ff79c6; /* Operators */
+}
+
+.highlight .n {
+  color: #f8f8f2; /* Names (classes, functions) */
+}
+
+.highlight .p {
+  color: #f8f8f2; /* Punctuation */
+}
+
+.highlight .s {
+  color: #f1fa8c; /* Strings */
+}
+
+.highlight .l {
+  color: #f8f8f2; /* Literal values */
+}
+
+.highlight .m {
+  color: #f8f8f2; /* Numbers */
+}
+
+.highlight .ch {
+  color: #6272a4; /* Character literals */
+}
+
+.highlight .h {
+  color: #ff79c6; /* HTML tags */
+}
+
+.highlight .s1 {
+  color: #f1fa8c; /* String (single quotes) */
+}
+
+.highlight .s2 {
+  color: #f1fa8c; /* String (double quotes) */
+}
+
+.highlight .na {
+  color: #f8f8f2; /* Names (attribute names) */
+}
+
+.highlight .ni {
+  color: #f8f8f2; /* Names (identifiers) */
+}
+
+.highlight .nt {
+  color: #f8f8f2; /* Names (type names) */
+}
+
+.highlight .vf {
+  color: #f8f8f2; /* Variable functions */
+}
+
+.highlight .vh {
+  color: #f8f8f2; /* Variable (header) */
+}
+
+.highlight .vi {
+  color: #f8f8f2; /* Variable (identifier) */
+}
+
+.highlight .vm {
+  color: #f8f8f2; /* Variable (modifier) */
+}
+
+.highlight .vc {
+  color: #f8f8f2; /* Variable (constant) */
+}
+
+.highlight .vi {
+  color: #f8f8f2; /* Variable (identifier) */
+}
+
+.highlight .vg {
+  color: #f8f8f2; /* Variable (global) */
+}
+
+.highlight .v {
+  color: #f8f8f2; /* Variable */
+}
+
+.highlight .c1 {
+  color: #6272a4; /* Comment (single line) */
+}
+
+.highlight .err {
+  background-color: #ff5555; /* Error background */
+  color: #282a36; /* Error text */
+}
+
+.highlight .doct {
+  color: #f1fa8c; /* Documentation */
+}
+
+.highlight .t {
+  color: #ff79c6; /* Types */
+}
+
+.highlight .li {
+  color: #f8f8f2; /* List items */
+}
+
+/* Optional: Add hover effects */
+.highlight pre:hover {
+  background-color: #44475a; /* Darker background on hover */
+}
+
+/* Styling for the copy button */
+.copy-btn {
+  background-color: #3e4042; /* Button color */
+  color: white; /* Button text color */
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0.5rem;
+  z-index: 1; /* Ensure the button is above other elements */
+}
+
+.copy-btn:hover {
+  background-color: #0b0b0b; /* Darker button color on hover */
+}
+
+figure {
+  position: relative; /* Position the copy button */
+}
+
+
+  

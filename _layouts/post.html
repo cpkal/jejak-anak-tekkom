@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body class="bg-gray-100">
+  <!-- Header -->
+  <header class="p-4">
+    <nav class="bg-gray-100">
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- Site Name -->
+        <div class="text-xl font-bold">
+          <a href="/" class="text-gray-900">{{ site.title }}</a>
+        </div>
+        <!-- Navigation Links -->
+        <div class="hidden md:flex space-x-6">
+          <a href="/" class="text-gray-700 hover:text-gray-900">Beranda</a>
+          <a href="/tentang-saya" class="text-gray-700 hover:text-gray-900">Tentang Saya</a>
+          <a href="https://cpkal.github.io/portfolio/" class="bg-sky-400 rounded-full px-2 text-white font-medium">Portofolio</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+  <!-- Post Content -->
+  <main class="container mx-auto my-4">
+    <article class="bg-white p-8">
+      <h2 class="text-4xl font-semibold mb-4">{{ page.title }}</h2>
+      <p class="text-gray-500 mb-6">Published on {{ page.date | date: "%B %d, %Y" }}</p>
+
+      <!-- Post Content -->
+      <div class="prose max-w-none">
+        {{ content }}
+      </div>
+
+      <!-- Post Tags -->
+      {% if page.tags %}
+      <div class="mt-8">
+        <p class="text-gray-600">Tags:</p>
+        <ul class="flex space-x-2">
+          {% for tag in page.tags %}
+          <li><a href="{{ site.baseurl }}/tag/{{ tag }}" class="text-blue-600 hover:underline">{{ tag }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </article>
+  </main>
+
+  <footer class="bg-sky-700 text-white py-4 mt-10">
+    <div class="container mx-auto text-center">
+      <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}.</p>
+      <p>Powered by <a href="https://jekyllrb.com/" class="underline">Jekyll</a></p>
+    </div>
+  </footer>
+
+  <script src="{{ '/assets/js/copy-code.js' | relative_url }}"></script>
+
+</body>
+</html>
