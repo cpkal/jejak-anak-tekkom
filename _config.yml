@@ -23,7 +23,7 @@ email: haikalg2003@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Website anak Teknik Komputer yang berisi tentang pengalaman, tutorial, dan informasi seputar Teknik Komputer dan hobi lainnya.
 baseurl: "jejak-anak-tekkom" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://cpkal.github.io/jejak-anak-tekkom" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  cpkal
 
