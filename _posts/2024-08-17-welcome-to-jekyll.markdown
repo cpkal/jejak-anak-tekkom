@@ -7,9 +7,10 @@ image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ-urJgUAnOvL139l9d
 tags: Javascript Programming
 
 ---
+ __italic__
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-![Coding](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ-urJgUAnOvL139l9d3Qh24y0LIhrEfTlXA&s)
+![Coding](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ-urJgUAnOvL139l9d3Qh24y0LIhrEfTlXA&s){: .center-image }
 
 Jekyll requires blog post files to be named according to the following format:
 
@@ -25,7 +26,16 @@ def print_hi(name)
 end
 print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+{% endhighlight %}  
+  
+<br>
+
+| Header 1 | Header 2 |
+|----------|----------|
+| Row 1    | Data     |
+| Row 2    | Data     |
+
+<br>
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
