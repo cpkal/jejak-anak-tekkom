@@ -1,0 +1,11 @@
+<div id="lunrsearchresultsparent" class="hidden w-full md:w-3/5 overflow-x-auto bg-white border border-gray-300 mx-auto absolute left-1/2 transform translate-y-16 -translate-x-1/2 z-50 p-8 rounded-lg " >
+    {% include search-lunr.html %}
+    <br>
+    <button class="absolute top-0 right-0 mx-2 font-bold p-2 text-lg" onclick="document.getElementById('lunrsearchresultsparent').classList.add('hidden');">x</button>
+    <div id="lunrsearchresults" class="">
+        <!-- create close button -->
+        <ul class="space-y-4 mt-4">
+            <!-- Search results will be appended here -->
+        </ul>
+    </div>
+</div>

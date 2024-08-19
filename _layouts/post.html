@@ -1,131 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{{ site.description | strip_html }}">
-  <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ 'assets/css/detail_post.css' | relative_url }}">
-</head>
-<body>
-  <!-- Header -->
-  <header class="p-4 shadow-sm">
-    <nav class="flex">
-      <div class="container mx-auto block md:flex justify-between items-center">
-        <!-- Site Name -->
-        <div class="flex items-center">
-          <a href="/" class="text-gray-900 text-xl font-bold">{{ site.title }}</a>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ site.description | strip_html }}">
+    <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ 'assets/css/detail_post.css' | relative_url }}">
+  </head>
+  <body>
+    {% include search-result-lunr.html %}
+
+    <!-- Header -->
+    {% include nav.html %}
+
+    <!-- Post Content -->
+    <main class="container mx-auto px-2 md:px-16 lg:px-28 my-4">
+      <article class="bg-white p-8">
+        <h2 class="text-4xl font-semibold mb-4">{{ page.title }}</h2>
+        <p class="text-gray-500 mb-6">Dipublikasikan pada {{ page.date | date: "%B %d, %Y" }} oleh <a href="https://cpkal.github.io/portfolio/" class="text-blue-600 hover:underline">Haikal Putra Gustiansyah</a></p>
+
+        <!-- Post Content -->
+        <div class="prose max-w-none text-md leading-normal">
+          {{ content }}
         </div>
 
-        <!-- Navigation Links -->
-        <div class="hidden md:flex md:space-x-6" id="hide-on-mobile">
-          <hr class="my-2 md:my-0">
-          <div class="relative">
-            <button id="dropdownButton" class="focus:outline-none">
-              Kategori
-            </button>
-            <div id="dropdownMenu" class="hidden absolute w-64 bg-sky-500 left-0 bg-white shadow-lg md:right-0 mt-2 z-50 rounded-lg">
-              <!-- foreach categories -->
-              {% for category in site.categories %}
-                <div class="w-full hover:bg-sky-500 bg-white">
-                  <a href="{{ site.baseurl }}/category/{{ category | first }}" class="block px-4 py-2 text-gray-800">{{ category | first }}</a>
-                </div>
-              {% endfor %}
-            </div>
-          </div>
-          <hr class="my-2 md:my-0">
-         <div class="w-full">
-          <a href="https://cpkal.github.io/portfolio/" class="bg-sky-400 rounded-full px-2 text-white font-medium">Portofolio</a>
-         </div>
-         <hr class="my-2 md:my-0">
-          
+        <!-- Post Tags -->
+        {% if page.tags %}
+        <div class="mt-8">
+          <p class="text-gray-600">Tags:</p>
+          <ul class="flex space-x-1 mt-2">
+            {% for tag in page.tags %}
+            <li><a href="{{ site.baseurl }}/tag/{{ tag }}" class="text-blue-600 hover:underline"><span class="bg-blue-500 text-white text-xs px-2 py-1 rounded-full mr-2 hover:cursor-pointer hover:bg-blue-700">{{ tag }}</span></a></li>
+            {% endfor %}
+          </ul>
         </div>
+        {% endif %}
+      </article>
 
-      </div>
-      <div id="nav-on-mobile-hamburger" class="block md:hidden mt-2 md:mt-0">
-        
-        <svg class="h-4" viewBox="0 0 12 12" enable-background="new 0 0 12 12" id="Слой_1" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <rect fill="#1D1D1B" height="1" width="11" x="0.5" y="5.5"></rect> <rect fill="#1D1D1B" height="1" width="11" x="0.5" y="2.5"></rect> <rect fill="#1D1D1B" height="1" width="11" x="0.5" y="8.5"></rect> </g> </g></svg>
-      </div>
+      <script src="https://giscus.app/client.js"
+              data-repo="cpkal/jejak-anak-tekkom"
+              data-repo-id="R_kgDOMkyLvA"
+              data-category="General"
+              data-category-id="DIC_kwDOMkyLvM4ChxVX"
+              data-mapping="pathname"
+              data-strict="0"
+              data-reactions-enabled="1"
+              data-emit-metadata="0"
+              data-input-position="bottom"
+              data-theme="light_tritanopia"
+              data-lang="en"
+              crossorigin="anonymous"
+              async>
+      </script>
+    </main>
 
+  {% include footer.html %}
+  {% include search-lunr-script.html %}
 
-    </nav>
-  </header>
-
-
-
-  <!-- Post Content -->
-  <main class="container mx-auto px-2 md:px-16 lg:px-28 my-4">
-    <article class="bg-white p-8">
-      <h2 class="text-4xl font-semibold mb-4">{{ page.title }}</h2>
-      <p class="text-gray-500 mb-6">Dipublikasikan pada {{ page.date | date: "%B %d, %Y" }} oleh <a href="https://cpkal.github.io/portfolio/" class="text-blue-600 hover:underline">Haikal Putra Gustiansyah</a></p>
-
-      <!-- Post Content -->
-      <div class="prose max-w-none text-md leading-normal">
-        {{ content }}
-      </div>
-
-      <!-- Post Tags -->
-      {% if page.tags %}
-      <div class="mt-8">
-        <p class="text-gray-600">Tags:</p>
-        <ul class="flex space-x-1 mt-2">
-          {% for tag in page.tags %}
-          <li><a href="{{ site.baseurl }}/tag/{{ tag }}" class="text-blue-600 hover:underline"><span class="bg-blue-500 text-white text-xs px-2 py-1 rounded-full mr-2 hover:cursor-pointer hover:bg-blue-700">{{ tag }}</span></a></li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-    </article>
-
-    <script src="https://giscus.app/client.js"
-            data-repo="cpkal/jejak-anak-tekkom"
-            data-repo-id="R_kgDOMkyLvA"
-            data-category="General"
-            data-category-id="DIC_kwDOMkyLvM4ChxVX"
-            data-mapping="pathname"
-            data-strict="0"
-            data-reactions-enabled="1"
-            data-emit-metadata="0"
-            data-input-position="bottom"
-            data-theme="light_tritanopia"
-            data-lang="en"
-            crossorigin="anonymous"
-            async>
-    </script>
-  </main>
-
- 
-
-  <footer class="bg-sky-700 text-white py-4 mt-10">
-    <div class="container mx-auto text-center">
-      <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }} | Powered by <a href="https://jekyllrb.com/" class="underline">Jekyll</a></p>
-    </div>
-  </footer>
-
-  <script src="{{ '/assets/js/copy-code.js' | relative_url }}"></script>
-  <script>
-    const dropdownButton = document.getElementById('dropdownButton');
-    const dropdownMenu = document.getElementById('dropdownMenu');
-    const hamburger = document.getElementById('nav-on-mobile-hamburger');
-    const hideOnMobile = document.getElementById('hide-on-mobile');
-
-    dropdownButton.addEventListener('click', () => {
-        dropdownMenu.classList.toggle('hidden');
-    });
-
-    document.addEventListener('click', (event) => {
-        if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
-            dropdownMenu.classList.add('hidden');
-        }
-    });
-
-    hamburger.addEventListener('click', (event) => {
-        hideOnMobile.classList.toggle('hidden');
-
-    })
+    <script src="{{ '/assets/js/copy-code.js' | relative_url }}"></script>
     
-</script>
-</body>
+  </body>
 </html>
