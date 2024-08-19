@@ -4,7 +4,7 @@ title:  "Welcome to Jekyll!"
 date:   2024-08-17 22:06:06 +0700
 categories: [Web Development]
 image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ-urJgUAnOvL139l9d3Qh24y0LIhrEfTlXA&s
-tags: [javascript, programming]
+tags: [Javascript, React JS]
 
 ---
  __italic__

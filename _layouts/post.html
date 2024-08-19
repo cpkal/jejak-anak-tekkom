@@ -57,7 +57,7 @@
   <main class="container mx-auto px-2 md:px-16 lg:px-28 my-4">
     <article class="bg-white p-8">
       <h2 class="text-4xl font-semibold mb-4">{{ page.title }}</h2>
-      <p class="text-gray-500 mb-6">Published on {{ page.date | date: "%B %d, %Y" }}</p>
+      <p class="text-gray-500 mb-6">Dipublikasikan pada {{ page.date | date: "%B %d, %Y" }} oleh <a href="https://cpkal.github.io/portfolio/" class="text-blue-600 hover:underline">Haikal Putra Gustiansyah</a></p>
 
       <!-- Post Content -->
       <div class="prose max-w-none text-md leading-normal">
@@ -68,15 +68,33 @@
       {% if page.tags %}
       <div class="mt-8">
         <p class="text-gray-600">Tags:</p>
-        <ul class="flex space-x-2">
+        <ul class="flex space-x-1 mt-2">
           {% for tag in page.tags %}
-          <li><a href="{{ site.baseurl }}/tag/{{ tag }}" class="text-blue-600 hover:underline">{{ tag }}</a></li>
+          <li><a href="{{ site.baseurl }}/tag/{{ tag }}" class="text-blue-600 hover:underline"><span class="bg-blue-500 text-white text-xs px-2 py-1 rounded-full mr-2 hover:cursor-pointer hover:bg-blue-700">{{ tag }}</span></a></li>
           {% endfor %}
         </ul>
       </div>
       {% endif %}
     </article>
+
+    <script src="https://giscus.app/client.js"
+            data-repo="cpkal/jejak-anak-tekkom"
+            data-repo-id="R_kgDOMkyLvA"
+            data-category="General"
+            data-category-id="DIC_kwDOMkyLvM4ChxVX"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="light_tritanopia"
+            data-lang="en"
+            crossorigin="anonymous"
+            async>
+    </script>
   </main>
+
+ 
 
   <footer class="bg-sky-700 text-white py-4 mt-10">
     <div class="container mx-auto text-center">
