@@ -64,6 +64,13 @@ Array.from(document.getElementsByClassName('search-lunr')).forEach((element, idx
     })
 })
 
+document.getElementById('lunrsearchresultsparent').addEventListener('click', function(e) {
+    e.stopPropagation();
+    if(e.target.id === 'lunrsearchresultsparent') {
+        document.getElementById('lunrsearchresultsparent').classList.add('hidden');
+    }
+})
+
 </script>
 <style>
     #lunrsearchresults {padding-top: 0.2rem;}

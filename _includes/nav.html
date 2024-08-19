@@ -3,20 +3,21 @@
       <div class="container mx-auto md:flex items-center">
         <!-- Site Name -->
         <div class="flex items-center flex-none">
-          <a href="/" class="text-gray-900 text-xl">{{ site.title }}</a>
+          <a href="/" class="text-gray-900 text-xl font-semibold">{{ site.title }}</a>
         </div>
 
         <!-- Navigation Links -->
         <div class="hidden md:flex md:space-x-6 flex-grow justify-between px-4" id="hide-on-mobile">
-          
+          <hr class="my-2 block md:hidden">
           
           <div class="block md:flex">
             <div class="hidden md:block">
               {% include search-lunr.html %}
             </div>
 
+            
             <div class="relative">
-              <button id="dropdownButton" class="focus:outline-none font-medium hover:text-sky-700">
+              <button id="dropdownButton" class="focus:outline-none hover:text-sky-700">
                 Kategori
               </button>
               <div id="dropdownMenu" class="hidden absolute w-64 left-0 md:right-0 mt-2 z-50 rounded-lg bg-white border border-gray-300">
@@ -30,7 +31,7 @@
             </div>
           </div>
           
-
+          <hr class="my-2 md:hidden">
           
          <div>
           <a href="https://cpkal.github.io/portfolio/" class="bg-sky-400 rounded-full px-2 text-white font-medium">Portofolio</a>
