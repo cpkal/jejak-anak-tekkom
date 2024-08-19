@@ -22,8 +22,9 @@ title: Jejak Anak Tekkom
 email: haikalg2003@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Website anak Teknik Komputer yang berisi tentang pengalaman, tutorial, dan informasi seputar Teknik Komputer dan hobi lainnya.
+keywords: "Blog, Web Development, SEO, Next.js, Mobile Development, Android, iOS, Math, Electrical Engineering, Computer Engineering, Math, College Math"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://jejakanaktekkom.rf.gd" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jejakanaktekkom.pages.dev" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  cpkal
 
@@ -31,6 +32,7 @@ github_username:  cpkal
 # theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 markdown: kramdown
 kramdown:
