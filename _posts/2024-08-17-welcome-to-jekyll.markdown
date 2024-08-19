@@ -2,9 +2,9 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2024-08-17 22:06:06 +0700
-categories: programming
+categories: [Web Development]
 image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ-urJgUAnOvL139l9d3Qh24y0LIhrEfTlXA&s
-tags: Javascript Programming
+tags: [javascript, programming]
 
 ---
  __italic__

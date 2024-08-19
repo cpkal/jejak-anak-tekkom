@@ -2,7 +2,7 @@
 layout: post
 title: "Sample Article for Jekyll Testing"
 date: 2024-08-18 10:00:00 +0700
-categories: [testing, example]
+categories: [Competitive Programming, Struktur Data Algoritma]
 tags: [sample, jekyll]
 comments: true
 
