@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Belajar menggunakan Git [PART 1]
-image: https://book.git-scm.com/images/logos/downloads/Git-Logo-2Color.png
+image: https://book.git-scm.com/images/logos/2color-lightbg@2x.png
 categories: ["Web Development"]
 tags: ["Git", "VCS", "Team Management"]
 ---
@@ -110,3 +110,6 @@ Jika kalian lihat dengan perintah `git branch` kalian akan berada di branch baru
 
 ## Penutup
 Dengan demikian, belajar Git Part 1 telah selesai. Pada artikel selanjutnya, penulis akan membahas penggunaan Github sebagai _Remote Repository_ dan beberapa perintah Git yang belum kita bahas pada artikel ini. 
+
+<br>
+#### Credit Thumbnail Image: Git Logo by Jason Long, licensed under Creative Commons Attribution 3.0 Unported License.
