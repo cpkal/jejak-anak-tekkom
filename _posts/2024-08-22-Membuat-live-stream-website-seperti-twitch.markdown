@@ -81,3 +81,6 @@ Ingest Server: [Ingest Server](https://github.com/cpkal/twitch-clone-ingest-serv
 
 Websocket Server: [Websocket Server](https://github.com/cpkal/twitch-clone-socket)
 
+<br>
+#### Credit: Thumbnail image by [Libby Penner](https://unsplash.com/@libby_penner) on Unsplash 
+
