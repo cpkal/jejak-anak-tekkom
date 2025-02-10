@@ -35,5 +35,3 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 # jekyll sitemap
 gem 'jekyll-sitemap'
 
-gem 'google-protobuf', '4.28.3'
-gem 'i18n', '1.14.6'
