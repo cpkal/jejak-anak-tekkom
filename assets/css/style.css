@@ -1487,6 +1487,14 @@ table tbody tr:nth-of-type(even) {
   --tw-ring-color: rgb(191 219 254 / var(--tw-ring-opacity));
 }
 
+/* style code tag with bg dark */
+code {
+  background-color: #2e2e2e;
+  color: #dcdcdc;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
 @media (min-width: 768px) {
   .md\:right-0 {
     right: 0px;

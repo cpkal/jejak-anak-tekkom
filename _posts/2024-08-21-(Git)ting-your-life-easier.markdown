@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Belajar menggunakan Git [PART 1]
-image: https://book.git-scm.com/images/logos/2color-lightbg@2x.png
+image: https://academy.alterra.id/blog/wp-content/uploads/2022/09/Git-Logo-2Color.png
 categories: ["Web Development"]
 tags: ["Git", "VCS", "Team Management"]
 ---
